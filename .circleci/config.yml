@@ -31,7 +31,7 @@ jobs:
       - run: apt-get -y -qq update
       - run: apt-get -y -qq install python-dev
       - run: curl -O https://bootstrap.pypa.io/get-pip.py
-      - run: python get-pip.py --user
+      - run: sudo easy_install pip
       - run: pip install awscli --upgrade --user
       - run: aws --version
       - run: aws s3 ls
