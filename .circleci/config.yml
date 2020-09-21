@@ -32,7 +32,7 @@ jobs:
       - run: apt-get -y -qq install python-dev
       - run: curl -O https://bootstrap.pypa.io/get-pip.py
       - run: python get-pip.py --user
-      - run: pip install awscli --upgrade 
+      - run: pip install awscli --upgrade --user
       - run: aws --version
       - run: aws s3 ls
       - run: yarn deploy
