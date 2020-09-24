@@ -21,8 +21,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: build
-      - run: aws configure set default.region eu-west-2
-      - run: aws s3 sync build $S3_BUCKET --acl public-read --delete
+      - run: yarn run deploy
 
 workflows:
   version: 2
