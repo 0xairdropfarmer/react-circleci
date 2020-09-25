@@ -31,6 +31,8 @@ jobs:
           monitor-on-build: false
           severity-threshold: high
 
+      - run: yarn lint
+
       - run: yarn size
 
       - run: yarn test
