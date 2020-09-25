@@ -37,6 +37,8 @@ jobs:
 
       - run: yarn test
 
+      - run: yarn add cypress --dev
+
       - run: yarn cypress:run
 
       - run: yarn build
