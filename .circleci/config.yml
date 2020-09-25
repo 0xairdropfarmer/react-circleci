@@ -15,7 +15,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "package.json" }}-{{ arch}}
             - v1-dependencies-
       - run: yarn install
 
@@ -24,7 +24,7 @@ jobs:
             - node_modules
             - ~/.npm
             - ~/.cache
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}-{{ arch}}
 
       - snyk/scan:
           fail-on-issues: false
